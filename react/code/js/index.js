@@ -1,11 +1,16 @@
+import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from "react-dom";
-import {createStrore} from 'redux';
+import {Provider} from 'react-redux';
+import {createStore} from 'redux';
 import allRedicers from './reducers';
+import WebPage from './components/WebPage';
 
-const store = createStrore (allRedicers);
+const store = createStore (allRedicers);
 
 ReactDOM.render(
-  <h2>Здесь может быть любой текст 2</h2>,
+  <Provider store={store}>
+  <WebPage />
+  </Provider>,
   document.getElementById('fieldToShow')
 );
