@@ -1,0 +1,21 @@
+import React from "react";
+import { render } from "react-dom";
+
+
+const styles = {
+  fontFamily: "sans-serif",
+  position: "relative",
+  height: "100%"
+};
+
+class App extends React.Component {
+  render() {
+    return (
+      <div style={styles}>
+        123
+      </div>
+    );
+  }
+}
+
+render(<App />, document.getElementById("root"));
